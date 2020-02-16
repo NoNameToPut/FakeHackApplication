@@ -8,8 +8,9 @@ Currently includes:
 
 Todo:
 - Language support
-- Code organisation
+- Code organisation (Most important)
 - Making the robux amount limited to numbers
+- A view password thing
 
 # Download
 Google Drive (Old): https://drive.google.com/open?id=1mE6keNmkM_76S6UdENsuz-LajpbfF_3I
