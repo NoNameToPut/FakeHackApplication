@@ -16,6 +16,7 @@ namespace FakeHackApplication
         private bool updateReleased;
         private bool textFieldUsername;
         private bool textFieldPassword;
+        private bool passHidden = true;
 
         public HackProgram()
         {
@@ -57,7 +58,7 @@ namespace FakeHackApplication
         private void progressBarTimer_Tick(object sender, EventArgs e)
         {
             progressBar.Increment(3);
-            if (progressBar.Value == 990)
+            if (progressBar.Value >= 950)
             {
                 updateReleased = true;
                 progressBarTimer.Stop();
@@ -65,7 +66,7 @@ namespace FakeHackApplication
                 btnCheckVersion.Enabled = true;
             }
         }
-        public void NewVersionMessage(bool exit)
+        private void NewVersionMessage(bool exit)
         {
             if (MessageBox.Show("A new version has been released. Please update the program to continue.", "New Update", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
@@ -84,7 +85,7 @@ namespace FakeHackApplication
         {
             if (updateReleased == false)
             {
-                MessageBox.Show("You are up to date.", "Version Check", MessageBoxButtons.OK);
+                MessageBox.Show("Status: This version is up to date\nVersion: v3.93", "Version Check", MessageBoxButtons.OK);
             }
             else
             {
@@ -100,6 +101,32 @@ namespace FakeHackApplication
         private void textBoxPassword_TextChanged(object sender, EventArgs e)
         {
             textFieldPassword = true;
+        }
+
+        private void btnPassViewer_Click(object sender, EventArgs e)
+        {
+            if (passHidden == true)
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+                passHidden = false;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+                passHidden = true;
+            }
+        }
+
+        private void HackProgram_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("This program does not actually generate Robux for you." +
+                " It does not work, and will never work." +
+                " Nothing in this world is ever free","Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

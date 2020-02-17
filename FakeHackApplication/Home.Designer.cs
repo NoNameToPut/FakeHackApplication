@@ -38,12 +38,18 @@
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnPassViewer = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // progressBarTimer
@@ -64,9 +70,9 @@
             this.btnHack.BackColor = System.Drawing.Color.Lime;
             this.btnHack.Font = new System.Drawing.Font("Myriad Pro Cond", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHack.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHack.Location = new System.Drawing.Point(372, 324);
+            this.btnHack.Location = new System.Drawing.Point(349, 324);
             this.btnHack.Name = "btnHack";
-            this.btnHack.Size = new System.Drawing.Size(95, 45);
+            this.btnHack.Size = new System.Drawing.Size(142, 45);
             this.btnHack.TabIndex = 1;
             this.btnHack.Text = "HACK";
             this.btnHack.UseVisualStyleBackColor = false;
@@ -74,9 +80,9 @@
             // 
             // btnCheckVersion
             // 
-            this.btnCheckVersion.Location = new System.Drawing.Point(372, 411);
+            this.btnCheckVersion.Location = new System.Drawing.Point(349, 411);
             this.btnCheckVersion.Name = "btnCheckVersion";
-            this.btnCheckVersion.Size = new System.Drawing.Size(95, 27);
+            this.btnCheckVersion.Size = new System.Drawing.Size(142, 27);
             this.btnCheckVersion.TabIndex = 2;
             this.btnCheckVersion.Text = "Check Version";
             this.btnCheckVersion.UseVisualStyleBackColor = true;
@@ -125,14 +131,6 @@
             this.textBoxPassword.TabIndex = 6;
             this.textBoxPassword.UseSystemPasswordChar = true;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(558, 239);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(230, 31);
-            this.textBox3.TabIndex = 7;
             // 
             // label1
             // 
@@ -197,6 +195,59 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Copyright 2020";
             // 
+            // btnPassViewer
+            // 
+            this.btnPassViewer.Location = new System.Drawing.Point(143, 316);
+            this.btnPassViewer.Name = "btnPassViewer";
+            this.btnPassViewer.Size = new System.Drawing.Size(88, 23);
+            this.btnPassViewer.TabIndex = 13;
+            this.btnPassViewer.Text = "View Password";
+            this.btnPassViewer.UseVisualStyleBackColor = true;
+            this.btnPassViewer.Click += new System.EventHandler(this.btnPassViewer_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(558, 240);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(230, 31);
+            this.numericUpDown1.TabIndex = 15;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
             // HackProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,12 +255,13 @@
             this.BackgroundImage = global::FakeHackApplication.Properties.Resources.ROBLOXwallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.btnPassViewer);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelPassword);
@@ -217,11 +269,17 @@
             this.Controls.Add(this.btnCheckVersion);
             this.Controls.Add(this.btnHack);
             this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "HackProgram";
             this.Text = "Robux Generator";
+            this.Load += new System.EventHandler(this.HackProgram_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,12 +295,16 @@
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnPassViewer;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
