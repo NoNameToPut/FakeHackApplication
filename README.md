@@ -7,7 +7,7 @@ Currently includes:
 - Big button that says HACK
 
 Todo:
-- Language support
+- Language support (If possible)
 - Code organisation (Most important)
 - Making the robux amount limited to numbers
 - A view password thing
